@@ -17,7 +17,9 @@
 */
 
 #include "aprintf.h"
-#include <Esp.h>
+#if defined(ESP8266)
+	#include <Esp.h>
+#endif
 
 static Print *aprintf_print = nullptr;
 

@@ -26,6 +26,7 @@ ev1527Init();
 heitechInit();
 impulsInit();
 keruiD026Init();
+iwds07Init();
 logilinkSwitchInit();
 mumbiInit();
 ninjablocksWeatherInit();

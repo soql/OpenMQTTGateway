@@ -19,7 +19,9 @@
 #ifndef _APRINTF_H_
 #define _APRINTF_H_
 
-#include <pgmspace.h>
+#if defined(ESP8266)
+	#include <pgmspace.h>
+#endif
 
 #ifndef __cplusplus
 #include <stdio.h>

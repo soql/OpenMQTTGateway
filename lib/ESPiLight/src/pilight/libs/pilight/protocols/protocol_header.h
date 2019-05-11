@@ -26,6 +26,7 @@
 #include "433.92/heitech.h"
 #include "433.92/impuls.h"
 #include "433.92/kerui_d026.h"
+#include "433.92/iwds07.h"
 #include "433.92/logilink_switch.h"
 #include "433.92/mumbi.h"
 #include "433.92/ninjablocks_weather.h"

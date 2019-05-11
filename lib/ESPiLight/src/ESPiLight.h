@@ -20,7 +20,11 @@
 #define ESPILIGHT_H
 
 #include <Arduino.h>
-#include <functional>
+
+
+#if defined(ESP8266)
+	#include <functional>
+#endif
 
 #ifndef RECEIVER_BUFFER_SIZE
 #define RECEIVER_BUFFER_SIZE 10
