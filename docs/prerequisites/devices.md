@@ -1,3 +1,4 @@
+# Devices
 A list of verified compatible devices is maintained here.
 
 Added to that is an overview of devices supported by OpenMQTTGateway:
