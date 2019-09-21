@@ -1,9 +1,9 @@
 - [**0 - What is it for 🏠**](goal)
 - **1 - Prerequisites🧭**
   - [Devices](prerequisites/devices)
-  - [Boards](prerequisites/boards)
-  - [Brokers](prerequisites/brokers)
-  - [Controllers](prerequisites/controllers)
+  - [Board](prerequisites/board)
+  - [Broker](prerequisites/broker)
+  - [Controller](prerequisites/controller)
 - **2 - Set it up 🔨**
   - [RF](setitup/rf)
   - [BLE](setitup/ble)

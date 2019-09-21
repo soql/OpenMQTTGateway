@@ -1,24 +1,28 @@
-# Compatible parts for the IR Gateway:
-* IR Gateway: an infrared diode for emitting
-* IR Gateway: a transistor 2N2222
-* IR Gateway: a 330 ohms resistor (connecting to Pin 9)
-* IR Gateway: a 220 ohms resistor (limit current to LED)
-* IR Gateway: an infrared receiver
+## Compatible parts for the IR Gateway:
+|Module|Purpose|Where to Buy|
+|-|-|-|
+|IR diode|Emitting|[compatible parts list](https://docs.google.com/spreadsheets/d/1_5fQjAixzRtepkykmL-3uN3G5bLfQ0zMajM9OBZ1bx0/edit#gid=1323184277)|
+|IR receiver|Receiving|[compatible parts list](https://docs.google.com/spreadsheets/d/1_5fQjAixzRtepkykmL-3uN3G5bLfQ0zMajM9OBZ1bx0/edit#gid=1323184277)|
+|transistor 2N2222|Amplify uC signal for the IR diode|-|
+|330 ohms resistor|-|[compatible parts list](https://docs.google.com/spreadsheets/d/1_5fQjAixzRtepkykmL-3uN3G5bLfQ0zMajM9OBZ1bx0/edit#gid=1323184277)|
+|220 ohms resistor|limit current to LED|[compatible parts list](https://docs.google.com/spreadsheets/d/1_5fQjAixzRtepkykmL-3uN3G5bLfQ0zMajM9OBZ1bx0/edit#gid=1323184277)|
 
 The IR setup can work with bc547 and a 4x3 LED-Matrix.
 
-# Pinout
+## Pinout
 |Board| Receiver Pin| Emitter Pin|
 |-|:-:|:-:|
 |Arduino UNO|D2|D9|
 |ESP8266|D4|D0|
-|ESP32|27|14|
+|ESP32|27/26|14|
 
-# Arduino Hardware setup
-Vcc pin of the Arduino, the IR Emitter and IR Receiver to a 5V supply source
-Ground pins of the Arduino, the Transistor and IR Receiver to the ground of the supply source.
+Connect the Emitter and Receiver to a 5V supply source, and the ground of your supply source to the ground of your board.
 
-![IR](https://github.com/1technophile/OpenMQTTGateway/blob/master/img/OpenMQTTgateway_Arduino_Addon_IR.png)
+## Arduino Hardware setup
+![IR](../img/OpenMQTTgateway_Arduino_Addon_IR.png)
 
-# ESP8266 Hardware setup
-![IR](https://github.com/1technophile/OpenMQTTGateway/blob/master/img/OpenMQTTgateway_ESP8266_Addon_IR.png)
+## ESP8266 Hardware setup
+![IR](../img/OpenMQTTgateway_ESP8266_Addon_IR.png)
+
+## ESP32 Hardware setup
+![IR](../img/OpenMQTTgateway_ESP32_Addon_IR.png)

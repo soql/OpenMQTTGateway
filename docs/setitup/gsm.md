@@ -1,11 +1,11 @@
-# Compatible parts for the 2G Gateway:
+## Compatible parts
 
 |Module|Purpose|Where to Buy|
 |-|-|-|
-|A6|GSM GPRS module|-|
+|A6|GSM GPRS module|[compatible parts list](https://docs.google.com/spreadsheets/d/1_5fQjAixzRtepkykmL-3uN3G5bLfQ0zMajM9OBZ1bx0/edit#gid=1323184277)|
 |A7|GSM GPRS module with GPS|[compatible parts list](https://docs.google.com/spreadsheets/d/1_5fQjAixzRtepkykmL-3uN3G5bLfQ0zMajM9OBZ1bx0/edit#gid=1323184277)|
 
-# Hardware setup:
+## Hardware setup:
 
 |Module Pin|NodeMCU / ESP8266 Pin|
 |-|:-:|
@@ -20,4 +20,4 @@ Don't use the nodemcu/wemos 5V pin for the A6/7 power, use a dedicated power sup
 
 So as to start your A6/7 module press the red button for 4 seconds, or link the PWR_KEY pin to VCC5.0 for the same time.
 
-![Addon_2G](https://github.com/1technophile/OpenMQTTGateway/blob/master/img/OpenMQTTgateway_ESP8266_Addon_2G.png)
+![Addon_2G](../img/OpenMQTTgateway_ESP8266_Addon_2G.png)

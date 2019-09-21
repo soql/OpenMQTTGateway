@@ -8,6 +8,14 @@ Or can actutate things (LED chipsets, relays).
 
 Here is some information to find the board suitable for your need, you have the choice between wifi, ethernet and off the shelves devices:
 
+Off the shelves wifi
+* SONOFF RF Bridge
+* Sonoff RFR3
+* Sonoff Basic
+* Wifi RF Gateway
+
+![boards](../img/OpenMQTTGateway_boards_Sonoff.png)
+
 Wifi/Ethernet:
 * ESP8266
 * ESP32
@@ -15,13 +23,6 @@ Wifi/Ethernet:
 * Arduino Uno with an ethernet shield
 
 ![boards](../img/OpenMQTTGateway_boards.png)
-
-Off the shelves wifi
-* SONOFF RF Bridge
-* Sonoff RFR3
-* Sonoff Basic
-
-![boards](../img/OpenMQTTGateway_boards_Sonoff.png)
 
 Arduino + ethernet shields enables faster responsiveness of the gateway and a reliable connection. 
 

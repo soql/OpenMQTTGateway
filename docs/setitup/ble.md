@@ -1,26 +1,27 @@
 # ESP32 BLE
-The ESP32 has an integrated BLE module, with this board the BLE gateway function without any hardware modification. Making it the advised platform for BLE.
+The ESP32 has an integrated BLE module, with this board the BLE gateway don't need any additional hardware. Making it the **advised board for BLE**.
 
-# Compatible parts (ESP8266 and Arduino boards):
-
+# ESP8266 and Arduino boards
+## Compatible modules
 |Module|Purpose|Where to Buy|
 |-|-|-|
 |HM 10 Keyes bluetooth module|Bluetooth|[compatible parts list](https://docs.google.com/spreadsheets/d/1_5fQjAixzRtepkykmL-3uN3G5bLfQ0zMajM9OBZ1bx0/edit#gid=1323184277)|
 
-# Hardware setup:
-
+## Pinout
 |Module Pin|Board RX Pin|Board TX Pin|
 |-|:-:|:-:|
 |Arduino|D6 to HM10 TX|D5 to HM10 RX|
 |ESP8266|D6 to HM10 TX|D7 to HM10 RX|
 
-Vcc pin of the board and the HM10 Module to a 5V supply source
+Vcc pin of the board and the HM10 Module to a 5V supply source.
 Ground pins of the board and the HM10 Module to the ground of the supply source.
+The HM10/11 firmware version must be  >= v601.
+The baud rate of the HM10/11 module must be set to 9600 bauds.
 
-The HM10/11 firmware version must be  >= v601
+## Arduino Hardware setup
+![BLE Arduino](../img/OpenMQTTgateway_Arduino_Addon_BT.png)
 
-![BLE Arduino](https://github.com/1technophile/OpenMQTTGateway/blob/master/img/OpenMQTTgateway_Arduino_Addon_BT.png)
-
-![BLE ESP8266](https://github.com/1technophile/OpenMQTTGateway/blob/master/img/OpenMQTTgateway_ESP8266_Addon_BT.png)
+## ESP8266 Hardware setup
+![BLE ESP8266](../img/OpenMQTTgateway_ESP8266_Addon_BT.png)
 
 
