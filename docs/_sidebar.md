@@ -1,4 +1,4 @@
-- [**0 - What is it for 🏠**](goal)
+- [**0 - What is it for 🏠**](README)
 - **1 - Prerequisites🧭**
   - [Devices](prerequisites/devices)
   - [Board](prerequisites/board)
@@ -15,7 +15,18 @@
 - **3 - Upload ➡️**
   - [From Binaries 😎](upload/binaries)
   - [From PlatformIO 👨‍🎓](upload/pio)
-- [**4 - Use ✈️**](use)
+- **4 - Use ✈️**
+  - [RF](use/rf)
+    - [RF](#rf-gateway)
+    - [Pilight](#pilight-gateway)
+    - [RF2](#rf2-gateway-kaku)
+  - [BLE](use/ble)
+  - [IR](use/ir)
+  - [LORA](use/lora)
+  - [GSM](use/gsm)
+  - [RFM69](use/rfm69)
+  - [Sensors](use/sensors)
+  - [Actuators](use/actuators)
 - [**5 - Integrate 🎉**](integrate)
   - [OpenHAB 2](integrate/openhab2)
   - [Home Assistant](integrate/home_assistant)

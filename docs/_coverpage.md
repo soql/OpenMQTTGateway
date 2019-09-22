@@ -3,6 +3,6 @@
 > One gateway, many technologies.
 
 [GitHub](https://github.com/1technophile/OpenMQTTGateway )
-[Get Started](#OpenMQTTGateway)
+[Get Started](#overview)
 
 ![color](#f0f0f0)

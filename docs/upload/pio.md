@@ -1,3 +1,4 @@
+## Upload with PlatformIO
 This section is usefull if you want to do advanced configuration of your project or if you choose an Arduino. Indeed the ESP family can be loaded directly without any configuration from your desktop. 
 Advanced configurations means changing the default used pins, the MQTT subjects and all the expert parameters that you can find in [user_config.h](https://github.com/1technophile/OpenMQTTGateway/blob/development/main/User_config.h) and in all [config_XX.h](https://github.com/1technophile/OpenMQTTGateway/tree/development/main).
 If you don't have to change the default parameters except wifi and broker setting you can go directly to the [Load](load) section.
@@ -57,13 +58,56 @@ You can define your environment into an additionnal `production_env.ini` file th
 This way when updating the code your environments definition will not be overwritten.
 
 Once your configuration is done you can upload the program to your board by clicking on the white arrow at the blue bottom bar of your PIO editor or with the following command:
-``` bash
-pio run --target upload
-```
+`pio run --target upload`
+
 PIO will download the necessaries platform and libraries with the correct versions, build the code and upload it.
 
 If you encounter errors the first thing to do is to clean your environment by using the white dust bin in the blue bottom bar.
 
 With some ESP it could be necessary to push the reset button when the upload begin.
 
-Once the program loaded you can go directly to the [use](use) section.
+If you want to erase the settings stored in the ESP memory use:
+`pio run --target erase`
+
+Once done the gateway should connect to your network and your broker, you should see it into the broker in the form of the following messages:
+```
+home/OpenMQTTGateway/LWT Online 
+home/OpenMQTTGateway/version
+```
+
+## API
+With the V0.9 we added the support of json for receiving and publishing.
+Per default Json reception and Json publication is activated, the previous simple reception mode is also activated to avoid regression on commands.
+
+You can deactivate Json or simple mode following theses instructions:
+```C++
+#define jsonPublishing true //comment if you don't want to use Json  publishing  (one topic for all the parameters)
+//example home/OpenMQTTGateway_ESP32_DEVKIT/BTtoMQTT/4XXXXXXXXXX4 {"rssi":-63,"servicedata":"fe0000000000000000000000000000000000000000"}
+//#define simplePublishing true //comment if you don't want to use simple publishing (one topic for one parameter)
+//example 
+// home/OpenMQTTGateway_ESP32_DEVKIT/BTtoMQTT/4XXXXXXXXXX4/rssi -63.0
+// home/OpenMQTTGateway_ESP32_DEVKIT/BTtoMQTT/4XXXXXXXXXX4/servicedata fe0000000000000000000000000000000000000000
+#define simpleReceiving true //comment if you don't want to use old way reception analysis
+#define jsonReceiving true //comment if you don't want to use Json  reception analysis
+```
+
+If you are using platformio you can also comment the definitions above and define your parameters into platformio.ini file by setting the following `build_flags`:
+```C++
+  '-DjsonPublishing=true'
+  '-DjsonReceiving=true'
+  '-DsimpleReceiving=true'
+  '-DsimplePublishing=true'
+```
+
+Note that depending on the environment the default platformio.ini has common option defined see sections:
+```
+[com-arduino]
+[com-esp]
+```
+
+If you want to use HASS MQTT discovery you need to have 
+`#define jsonPublishing true`
+&
+`#define ZmqttDiscovery "HADiscovery"`
+uncommented.
+Added to that auto discovery box should be selected into your Home Assistant MQTT integration configuration.
