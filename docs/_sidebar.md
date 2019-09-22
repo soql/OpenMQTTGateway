@@ -14,7 +14,7 @@
   - [Actuators](setitup/actuators)
 - **3 - Upload ➡️**
   - [From Binaries 😎](upload/binaries)
-  - [From PlatformIO 👨‍🎓](upload/pio)
+  - [From PlatformIO 👨🏽‍💻](upload/pio)
 - **4 - Use ✈️**
   - [RF](use/rf)
     - [RF](#rf-gateway)
@@ -27,7 +27,7 @@
   - [RFM69](use/rfm69)
   - [Sensors](use/sensors)
   - [Actuators](use/actuators)
-- [**5 - Integrate 🎉**](integrate)
+- **5 - Integrate 🎉**
   - [OpenHAB 2](integrate/openhab2)
   - [Home Assistant](integrate/home_assistant)
   - [Node Red](integrate/node_red)
