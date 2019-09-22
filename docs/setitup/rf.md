@@ -11,8 +11,8 @@
 |Board| Receiver Pin| Emitter Pin|
 |-|:-:|:-:|
 |Arduino UNO|D3|D4|
-|ESP8266|D2/D3/D1/D8|RX/D2|
-|ESP32|27/26|12|
+|ESP8266|D2/**D3**/D1/D8|**RX**/D2|
+|ESP32|**27**/26|12|
 |RF BRIDGE|-|-|
 |RF BRIDGE [DIRECT HACK](https://github.com/xoseperez/espurna/wiki/Hardware-Itead-Sonoff-RF-Bridge---Direct-Hack)|4|5|
 |SONOFF RFR3|4|-|

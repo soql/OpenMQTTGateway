@@ -19,6 +19,6 @@ Added to that is an overview of devices supported by OpenMQTTGateway:
     <img alt="compatible devices" src="../img/OpenMQTTGateway_devices_ble.png" width=250>
 </p>
 
-* For infrared devices the list of supported brand is [here](https://github.com/1technophile/OpenMQTTGateway/blob/d2dd6138558909b71cc44f69665340247bd5f356/main/config_IR.h#L52), as there is also the possibility of using raw and global caché sending the possibilities of this gateway is huge!
+* For infrared IR devices the list of supported brand is [here](https://github.com/1technophile/OpenMQTTGateway/blob/d2dd6138558909b71cc44f69665340247bd5f356/main/config_IR.h#L52), as there is also the possibility of using raw and global caché sending the possibilities of this gateway is huge!
 
 * LORA is more dedicated at this moment for tinkering and DIY and there is no Off the shelves devices compatible to my knowledge with this gateway.
