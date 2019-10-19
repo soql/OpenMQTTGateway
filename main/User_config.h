@@ -49,12 +49,12 @@
 
 /*-------------DEFINE YOUR  NETWORK PARAMETERS BELOW----------------*/
 #if defined(ESP8266)||defined(ESP32)  // for nodemcu, weemos and esp8266
-  //#define ESPWifiManualSetup true //uncomment you don't want to use wifimanager for your credential settings on ESP
+  #define ESPWifiManualSetup true //uncomment you don't want to use wifimanager for your credential settings on ESP
 #endif
 
 #if defined(ESPWifiManualSetup) // for nodemcu, weemos and esp8266
-  #define wifi_ssid "wifi ssid"
-  #define wifi_password "wifi password"
+  #define wifi_ssid "ZJC-N"
+  #define wifi_password "820813130882"
 #else // for arduino + W5100
   const byte mac[] = {  0xDE, 0xED, 0xBA, 0xFE, 0x54, 0x95 }; //W5100 ethernet shield mac adress
 #endif
@@ -67,13 +67,13 @@
 /*-------------DEFINE YOUR MQTT PARAMETERS BELOW----------------*/
 //MQTT Parameters definition
 //#define mqtt_server_name "www.mqtt_broker.com" // instead of defining the server by its IP you can define it by its name, uncomment this line and set the correct MQTT server host name
-char mqtt_user[20] = "your_username"; // not compulsory only if your broker needs authentication
-char mqtt_pass[30] = "your_password"; // not compulsory only if your broker needs authentication
-char mqtt_server[40] = "192.168.1.17";
+char mqtt_user[20] = ""; // not compulsory only if your broker needs authentication
+char mqtt_pass[30] = ""; // not compulsory only if your broker needs authentication
+char mqtt_server[40] = "192.168.1.168";
 char mqtt_port[6] = "1883";
 
 #ifndef Gateway_Name
-  #define Gateway_Name "OpenMQTTGateway"
+  #define Gateway_Name "ZALESIE_SZAFKA"
 #endif
 //uncomment the line below to integrate msg value into the subject when receiving
 //#define valueAsASubject true
@@ -112,13 +112,13 @@ char mqtt_port[6] = "1883";
 #define MinimumWifiSignalQuality 8
 
 // these values are only used if no dhcp configuration is available
-const byte ip[] = { 192, 168, 1, 99 }; //ip adress
-const byte gateway[] = { 0, 0, 0, 0 }; //ip adress, if first value is different from 0 advanced config network will be used and you should fill gateway & dns
-const byte Dns[] = { 0, 0, 0, 0 }; //ip adress, if first value is different from 0 advanced config network will be used and you should fill gateway & dns
+const byte ip[] = { 192, 168, 1, 20 }; //ip adress
+const byte gateway[] = { 192,168,1,1 }; //ip adress, if first value is different from 0 advanced config network will be used and you should fill gateway & dns
+const byte Dns[] = { 192,168,1,1 }; //ip adress, if first value is different from 0 advanced config network will be used and you should fill gateway & dns
 const byte subnet[] = { 255, 255, 255, 0 }; //ip adress
 
 /*-------------DEFINE YOUR MQTT ADVANCED PARAMETERS BELOW----------------*/
-#define Base_Topic "home/"
+#define Base_Topic "zalesie/"
 #define version_Topic  Base_Topic Gateway_Name "/version"
 #define will_Topic  Base_Topic Gateway_Name "/LWT"
 #define will_QoS 0
@@ -130,7 +130,7 @@ const byte subnet[] = { 255, 255, 255, 0 }; //ip adress
 //example home/OpenMQTTGateway_ESP32_DEVKIT/BTtoMQTT/4XXXXXXXXXX4 {"rssi":-63,"servicedata":"fe0000000000000000000000000000000000000000"}
 #define jsonReceiving true //comment if you don't want to use Json  reception analysis
 
-//#define simplePublishing true //comment if you don't want to use simple publishing (one topic for one parameter)
+#define simplePublishing true //comment if you don't want to use simple publishing (one topic for one parameter)
 //example 
 // home/OpenMQTTGateway_ESP32_DEVKIT/BTtoMQTT/4XXXXXXXXXX4/rssi -63.0
 // home/OpenMQTTGateway_ESP32_DEVKIT/BTtoMQTT/4XXXXXXXXXX4/servicedata fe0000000000000000000000000000000000000000

@@ -644,13 +644,13 @@ void setup_wifi() {
   IPAddress subnet_adress(subnet);
   IPAddress dns_adress(Dns);
   WiFi.begin(wifi_ssid, wifi_password);
-  //WiFi.config(ip_adress,gateway_adress,subnet_adress,dns_adress); //Uncomment this line if you want to use advanced network config
+  WiFi.config(ip_adress,gateway_adress,subnet_adress,dns_adress); //Uncomment this line if you want to use advanced network config - DHCP
     
   while (WiFi.status() != WL_CONNECTED) {
     delay(500);
     trc(F("."));
     failureAttempt++; //DIRTY FIX ESP32
-    if (failureAttempt > 30) setup_wifi(); //DIRTY FIX ESP32
+    if (failureAttempt > 30) ESP.restart(); //DIRTY FIX ESP32
   }
   trc(F("WiFi ok with manual config credentials"));
 }
